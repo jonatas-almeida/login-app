@@ -35,14 +35,26 @@ export class RegisterComponent implements OnInit {
   //Cadastra um usuário
   addUser(){
     if(this.registerForm.valid){
-      this.users = Object.assign({}, this.registerForm.value);
+      this.users = Object.assign({password: this.registerForm.get('user_password'). value}, this.registerForm.value);
 
       this.userService.postUser(this.users).subscribe(
         () => {
           alert("Usuário cadastrado com sucesso!");
           this.router.navigateByUrl('/');
         }, error => {
-          console.log(error.error);
+          const erro = error.error;
+
+          error.array.forEach(element => {
+            switch (element.code) {
+              case 'DuplicateUserName':
+                alert('Cadastro duplicado!');
+                break;
+
+              default: 
+                alert("Erro no cadastro!");
+                break;
+            }
+          });
         }
       )
     }

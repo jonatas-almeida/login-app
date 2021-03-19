@@ -1,2 +1,17 @@
-<p>login works!</p>
-<button class="btn-register" routerLink="/register">Cadastrar</button>
+<div class="login-container">
+    <div class="login-content">
+        <div class="login-wrapper">
+            <h1 class="login-title">Ranek</h1>
+            <div class="login-form-container">
+                <form class="login-form">
+                    <label>Usuário:</label>
+                    <input type="text" [(ngModel)]="model.user_name" name="user_name">
+                    <label>Senha:</label>
+                    <input type="password" [(ngModel)]="model.user_password" name="user_password">
+                    <button class="btn-login" (click)="login()">Login</button>
+                    <button class="btn-register" routerLink="/register">Cadastre-se</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
