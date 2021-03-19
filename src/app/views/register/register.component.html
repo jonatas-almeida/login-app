@@ -1,0 +1,28 @@
+<div class="register-container">
+    <div class="register-content">
+        <div class="register-wrapper">
+            <div class="register-header">
+                <!--Colocar um botão para voltar pra o login-->
+                <h1 class="register-title">Cadastre-se</h1>
+            </div>
+            <div class="form-container">
+                <form class="register-form" [formGroup]="registerForm">
+                    <label>Nome de usuário:</label>
+                    <input type="text" placeholder="Digite um nome de usuário" formControlName="user_name" name="user_name">
+                    <label>E-mail:</label>
+                    <input type="email" placeholder="Digite seu e-mail" formControlName="user_email" name="user_email">
+                    <label>Senha:</label>
+                    <input type="password" placeholder="Digite seu e-mail" formControlName="user_password" name="user_password">
+                    <label>Telefone:</label>
+                    <input type="phone" placeholder="Digite seu telefone" formControlName="user_phone" name="user_phone">
+                    <label>Bio:</label>
+                    <textarea rows="5" placeholder="Digite a sua bio aqui" formControlName="user_bio" name="user_bio"></textarea>
+                    <button class="btn-register" (click)="addUser()">Cadastrar</button>
+                </form>
+                <div class="register-img">
+                    <img class="register-img-char" src="../../../assets/register.svg">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

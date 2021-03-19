@@ -1,0 +1,21 @@
+{
+  "user": [
+    {
+      "user_name": "jonatas",
+      "user_email": "jonatas@email.com",
+      "user_password": "jonatas123",
+      "user_phone": "8191111111",
+      "user_bio": "Desenvolvedor Front-End Angular",
+      "id": 1
+    },
+    {
+      "user_name": "juliana",
+      "user_email": "juliana@email.com",
+      "user_password": "ju123",
+      "user_phone": "8191111111",
+      "user_bio": "Amor da minha vida",
+      "id": 2
+    }
+  ],
+  "products": []
+}
